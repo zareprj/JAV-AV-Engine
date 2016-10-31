@@ -1,0 +1,11 @@
+BUILD: Computing Include file dependencies:
+BUILD: null byte at offset 0x00000003
+BUILD: 14793 null bytes in file
+BUILD: null byte at offset 0x00000003
+BUILD: 4274 null bytes in file
+BUILD: Examining c:\users\zare\documents\project\guard directory for files to compile.
+oacr invalidate root:x86chk /autocleanqueue
+1>Compiling and Linking c:\users\zare\documents\project\guard *************
+1>'nmake.exe /nologo BUILDMSG=Stop. -i /nologo /f c:\winddk\7600.16385.0\bin\makefile.def BUILD_PASS=PASS2 LINKONLY=1 NOPASS0=1 MAKEDIR_RELATIVE_TO_BASEDIR='
+1>c:\users\zare\documents\project\guard: TARGETPATH is OBJ
+1>BUILDMSG: _NT_TARGET_VERSION SET TO WINXP

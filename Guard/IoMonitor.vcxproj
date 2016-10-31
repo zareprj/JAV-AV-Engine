@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8673198A-0F0F-4E35-B894-432A9594FD84}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <NMakeBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ddkbuild.bat  -WNETXP -oacr  checked .</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <NMakeCleanCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">del objchk_wxp_x86</NMakeCleanCommandLine>
+    <NMakeOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">IoMonitor.sys</NMakeOutput>
+    <NMakePreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">WIN32;_DEBUG;__DEMOVERSION__;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\WinDDK\7600.16385.0\inc\api;D:\WinDDK\7600.16385.0\inc\crt\gl;D:\WinDDK\7600.16385.0\inc\crt\sys;D:\WinDDK\7600.16385.0\inc\crt;D:\WinDDK\7600.16385.0\inc\ddk;D:\WinDDK\7600.16385.0\inc\wdf;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <NMakeForcedIncludes Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(NMakeForcedIncludes)</NMakeForcedIncludes>
+    <NMakeAssemblySearchPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
+    <NMakeForcedUsingAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(NMakeForcedUsingAssemblies)</NMakeForcedUsingAssemblies>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <NMakeBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ddkbuild.bat -verbose -xp  -oacr checked .</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <NMakeCleanCommandLine Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <NMakeOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">IoMonitor.sys</NMakeOutput>
+    <NMakePreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <NMakeForcedIncludes Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(NMakeForcedIncludes)</NMakeForcedIncludes>
+    <NMakeAssemblySearchPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
+    <NMakeForcedUsingAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(NMakeForcedUsingAssemblies)</NMakeForcedUsingAssemblies>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AvlTree.c" />
+    <ClCompile Include="BinaryTranslate.c" />
+    <ClCompile Include="CPU.c" />
+    <ClCompile Include="DatFileEnumator.c" />
+    <ClCompile Include="DatFileLoader.c" />
+    <ClCompile Include="DebugHeader.c" />
+    <ClCompile Include="FastIo.c" />
+    <ClCompile Include="FileApiBYIRP.c" />
+    <ClCompile Include="FileInformation.c" />
+    <ClCompile Include="FilterDispatch.c" />
+    <ClCompile Include="Header.c" />
+    <ClCompile Include="Hook.c" />
+    <ClCompile Include="IFunc.c" />
+    <ClCompile Include="iomonitor.c" />
+    <ClCompile Include="JDecryptedFile.c" />
+    <ClCompile Include="JFile.c" />
+    <ClCompile Include="LoadDatFile.c" />
+    <ClCompile Include="Log.c" />
+    <ClCompile Include="Mem.c" />
+    <ClCompile Include="MemoryTree.c" />
+    <ClCompile Include="OperationsFunctions.c" />
+    <ClCompile Include="OwnDispatch.c" />
+    <ClCompile Include="PatMatchUtility.c" />
+    <ClCompile Include="SbScaner.c" />
+    <ClCompile Include="ScanImp.c" />
+    <ClCompile Include="SMBuffer.c" />
+    <ClCompile Include="SMFile.c" />
+    <ClCompile Include="StateMachine.c" />
+    <ClCompile Include="VirtualMachine.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="All_Defines.h" />
+    <ClInclude Include="avltree.h" />
+    <ClInclude Include="BinaryTranslate.h" />
+    <ClInclude Include="CPU.h" />
+    <ClInclude Include="DatFileEnumator.h" />
+    <ClInclude Include="DatFileLoader.h" />
+    <ClInclude Include="DatFileStruct.h" />
+    <ClInclude Include="Dms.h" />
+    <ClInclude Include="FastIo.h" />
+    <ClInclude Include="FileApiBYIRP.h" />
+    <ClInclude Include="FileInformation.h" />
+    <ClInclude Include="FileIoStruct.h" />
+    <ClInclude Include="FilterDispatch.h" />
+    <ClInclude Include="Header.h" />
+    <ClInclude Include="hook.h" />
+    <ClInclude Include="IFunc.h" />
+    <ClInclude Include="IOCTL.h" />
+    <ClInclude Include="iomonitor.h" />
+    <ClInclude Include="jbuffer.h" />
+    <ClInclude Include="JDecryptedFile.h" />
+    <ClInclude Include="Jfile.h" />
+    <ClInclude Include="LoadDatFile.h" />
+    <ClInclude Include="Log.h" />
+    <ClInclude Include="Mem.h" />
+    <ClInclude Include="MemoryTree.h" />
+    <ClInclude Include="OperationsFunctions.h" />
+    <ClInclude Include="OwnDispatch.h" />
+    <ClInclude Include="PatMatchUtility.h" />
+    <ClInclude Include="SbScaner.h" />
+    <ClInclude Include="ScanImp.h" />
+    <ClInclude Include="SMBuffer.h" />
+    <ClInclude Include="SMFile.h" />
+    <ClInclude Include="SMTypeDefine.h" />
+    <ClInclude Include="StateMachine.h" />
+    <ClInclude Include="VirtualMachine.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="readme.txt" />
+    <None Include="SOURCES" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

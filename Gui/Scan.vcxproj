@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{53FF0C92-EFF8-30F3-A994-E60AC79CFC2A}</ProjectGuid>
+    <RootNamespace>Scan</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <OutputDirectory>debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <OutputDirectory>release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Scan</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</IgnoreImportLibrary>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Scan</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>c:\Qt\2010.05\qt\include\QtCore;c:\Qt\2010.05\qt\include\QtGui;c:\Qt\2010.05\qt\include\QtXml;c:\Qt\2010.05\qt\include;.;c:\Qt\2010.05\qt\include\ActiveQt;debug;c:\Qt\2010.05\qt\mkspecs\win32-msvc2010;C:\Users\Zare\Documents\Project\AVEngine_AsyncRPC;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>debug\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_LARGEFILE_SUPPORT;QT_XML_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_THREAD_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>.\</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>c:\Qt\2010.05\qt\lib\qtmaind.lib;c:\Qt\2010.05\qt\lib\QtXmld.lib;c:\Qt\2010.05\qt\lib\QtGuid.lib;c:\Qt\2010.05\qt\lib\QtCored.lib;kernel32.lib;user32.lib;shell32.lib;uuid.lib;ole32.lib;advapi32.lib;ws2_32.lib;gdi32.lib;comdlg32.lib;oleaut32.lib;imm32.lib;winmm.lib;winspool.lib;msimg32.lib;Rpcrt4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>c:\Qt\2010.05\qt\lib;D:\Ebrahim\Project\MySQLConnector\lib\opt;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <OutputFile>debug\Scan.exe</OutputFile>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl />
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_LARGEFILE_SUPPORT;QT_XML_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_THREAD_SUPPORT;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>"c:\Qt\2010.05\qt\include\QtCore";"c:\Qt\2010.05\qt\include\QtGui";"c:\Qt\2010.05\qt\include\QtXml";"c:\Qt\2010.05\qt\include";".";"c:\Qt\2010.05\qt\include\ActiveQt";"release";".";c:\Qt\2010.05\qt\mkspecs\win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>release\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>QT_NO_DEBUG;NDEBUG;_WINDOWS;UNICODE;WIN32;QT_LARGEFILE_SUPPORT;QT_NO_DEBUG;QT_XML_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_THREAD_SUPPORT;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>.\</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>c:\Qt\2010.05\qt\lib\qtmain.lib;c:\Qt\2010.05\qt\lib\QtXml.lib;c:\Qt\2010.05\qt\lib\QtGui.lib;c:\Qt\2010.05\qt\lib\QtCore.lib;kernel32.lib;user32.lib;shell32.lib;uuid.lib;ole32.lib;advapi32.lib;ws2_32.lib;gdi32.lib;comdlg32.lib;oleaut32.lib;imm32.lib;winmm.lib;winspool.lib;msimg32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>c:\Qt\2010.05\qt\lib;D:\Ebrahim\Project\MySQLConnector\lib\opt;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>release\Scan.exe</OutputFile>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl />
+    <ResourceCompile>
+      <PreprocessorDefinitions>QT_NO_DEBUG;NDEBUG;_WINDOWS;UNICODE;WIN32;QT_LARGEFILE_SUPPORT;QT_NO_DEBUG;QT_XML_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_THREAD_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\AVEngine_AsyncRPC\AVEngine_AsyncRPC_c.c" />
+    <ClCompile Include="business\AsyncRPCc.cpp" />
+    <ClCompile Include="aboutus.cpp" />
+    <ClCompile Include="extendedfilesystem.cpp" />
+    <ClCompile Include="linllabel.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="pathselect.cpp" />
+    <ClCompile Include="reportofscan_dialog.cpp" />
+    <ClCompile Include="scan.cpp" />
+    <ClCompile Include="setting.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="business\AVEngine_AsyncRPC_h.h" />
+    <ClInclude Include="business\AsyncRPCc.h" />
+    <CustomBuild Include="aboutus.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\2010.05\qt\bin\moc.exe;aboutus.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\2010.05\qt\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"c:\Qt\2010.05\qt\include\QtCore" -I"c:\Qt\2010.05\qt\include\QtGui" -I"c:\Qt\2010.05\qt\include\QtXml" -I"c:\Qt\2010.05\qt\include" -I"." -I"c:\Qt\2010.05\qt\include\ActiveQt" -I"debug" -I"." -Ic:\Qt\2010.05\qt\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 aboutus.h -o debug\moc_aboutus.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC aboutus.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\moc_aboutus.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\2010.05\qt\bin\moc.exe;aboutus.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\2010.05\qt\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"c:\Qt\2010.05\qt\include\QtCore" -I"c:\Qt\2010.05\qt\include\QtGui" -I"c:\Qt\2010.05\qt\include\QtXml" -I"c:\Qt\2010.05\qt\include" -I"." -I"c:\Qt\2010.05\qt\include\ActiveQt" -I"release" -I"." -Ic:\Qt\2010.05\qt\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 aboutus.h -o release\moc_aboutus.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC aboutus.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\moc_aboutus.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="extendedfilesystem.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\2010.05\qt\bin\moc.exe;extendedfilesystem.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\2010.05\qt\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"c:\Qt\2010.05\qt\include\QtCore" -I"c:\Qt\2010.05\qt\include\QtGui" -I"c:\Qt\2010.05\qt\include\QtXml" -I"c:\Qt\2010.05\qt\include" -I"." -I"c:\Qt\2010.05\qt\include\ActiveQt" -I"debug" -I"." -Ic:\Qt\2010.05\qt\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 extendedfilesystem.h -o debug\moc_extendedfilesystem.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC extendedfilesystem.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\moc_extendedfilesystem.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\2010.05\qt\bin\moc.exe;extendedfilesystem.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\2010.05\qt\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"c:\Qt\2010.05\qt\include\QtCore" -I"c:\Qt\2010.05\qt\include\QtGui" -I"c:\Qt\2010.05\qt\include\QtXml" -I"c:\Qt\2010.05\qt\include" -I"." -I"c:\Qt\2010.05\qt\include\ActiveQt" -I"release" -I"." -Ic:\Qt\2010.05\qt\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 extendedfilesystem.h -o release\moc_extendedfilesystem.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC extendedfilesystem.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\moc_extendedfilesystem.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="linllabel.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\2010.05\qt\bin\moc.exe;linllabel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\2010.05\qt\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"c:\Qt\2010.05\qt\include\QtCore" -I"c:\Qt\2010.05\qt\include\QtGui" -I"c:\Qt\2010.05\qt\include\QtXml" -I"c:\Qt\2010.05\qt\include" -I"." -I"c:\Qt\2010.05\qt\include\ActiveQt" -I"debug" -I"." -Ic:\Qt\2010.05\qt\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 linllabel.h -o debug\moc_linllabel.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC linllabel.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\moc_linllabel.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\2010.05\qt\bin\moc.exe;linllabel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\2010.05\qt\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"c:\Qt\2010.05\qt\include\QtCore" -I"c:\Qt\2010.05\qt\include\QtGui" -I"c:\Qt\2010.05\qt\include\QtXml" -I"c:\Qt\2010.05\qt\include" -I"." -I"c:\Qt\2010.05\qt\include\ActiveQt" -I"release" -I"." -Ic:\Qt\2010.05\qt\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 linllabel.h -o release\moc_linllabel.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC linllabel.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\moc_linllabel.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="main.h" />
+    <ClInclude Include="myThreadHandler.h" />
+    <CustomBuild Include="pathselect.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\2010.05\qt\bin\moc.exe;pathselect.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\2010.05\qt\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"c:\Qt\2010.05\qt\include\QtCore" -I"c:\Qt\2010.05\qt\include\QtGui" -I"c:\Qt\2010.05\qt\include\QtXml" -I"c:\Qt\2010.05\qt\include" -I"." -I"c:\Qt\2010.05\qt\include\ActiveQt" -I"debug" -I"." -Ic:\Qt\2010.05\qt\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 pathselect.h -o debug\moc_pathselect.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC pathselect.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\moc_pathselect.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\2010.05\qt\bin\moc.exe;pathselect.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\2010.05\qt\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"c:\Qt\2010.05\qt\include\QtCore" -I"c:\Qt\2010.05\qt\include\QtGui" -I"c:\Qt\2010.05\qt\include\QtXml" -I"c:\Qt\2010.05\qt\include" -I"." -I"c:\Qt\2010.05\qt\include\ActiveQt" -I"release" -I"." -Ic:\Qt\2010.05\qt\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 pathselect.h -o release\moc_pathselect.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC pathselect.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\moc_pathselect.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="reportofscan_dialog.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\2010.05\qt\bin\moc.exe;reportofscan_dialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\2010.05\qt\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"c:\Qt\2010.05\qt\include\QtCore" -I"c:\Qt\2010.05\qt\include\QtGui" -I"c:\Qt\2010.05\qt\include\QtXml" -I"c:\Qt\2010.05\qt\include" -I"." -I"c:\Qt\2010.05\qt\include\ActiveQt" -I"debug" -I"." -Ic:\Qt\2010.05\qt\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 reportofscan_dialog.h -o debug\moc_reportofscan_dialog.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC reportofscan_dialog.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\moc_reportofscan_dialog.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\2010.05\qt\bin\moc.exe;reportofscan_dialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\2010.05\qt\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"c:\Qt\2010.05\qt\include\QtCore" -I"c:\Qt\2010.05\qt\include\QtGui" -I"c:\Qt\2010.05\qt\include\QtXml" -I"c:\Qt\2010.05\qt\include" -I"." -I"c:\Qt\2010.05\qt\include\ActiveQt" -I"release" -I"." -Ic:\Qt\2010.05\qt\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 reportofscan_dialog.h -o release\moc_reportofscan_dialog.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC reportofscan_dialog.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\moc_reportofscan_dialog.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="resource.h" />
+    <CustomBuild Include="scan.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\2010.05\qt\bin\moc.exe;scan.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\2010.05\qt\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"c:\Qt\2010.05\qt\include\QtCore" -I"c:\Qt\2010.05\qt\include\QtGui" -I"c:\Qt\2010.05\qt\include\QtXml" -I"c:\Qt\2010.05\qt\include" -I"." -I"c:\Qt\2010.05\qt\include\ActiveQt" -I"debug" -I"." -Ic:\Qt\2010.05\qt\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 scan.h -o debug\moc_scan.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC scan.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\moc_scan.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\2010.05\qt\bin\moc.exe;scan.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\2010.05\qt\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"c:\Qt\2010.05\qt\include\QtCore" -I"c:\Qt\2010.05\qt\include\QtGui" -I"c:\Qt\2010.05\qt\include\QtXml" -I"c:\Qt\2010.05\qt\include" -I"." -I"c:\Qt\2010.05\qt\include\ActiveQt" -I"release" -I"." -Ic:\Qt\2010.05\qt\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 scan.h -o release\moc_scan.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC scan.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\moc_scan.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="setting.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\2010.05\qt\bin\moc.exe;setting.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\2010.05\qt\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"c:\Qt\2010.05\qt\include\QtCore" -I"c:\Qt\2010.05\qt\include\QtGui" -I"c:\Qt\2010.05\qt\include\QtXml" -I"c:\Qt\2010.05\qt\include" -I"." -I"c:\Qt\2010.05\qt\include\ActiveQt" -I"debug" -I"." -Ic:\Qt\2010.05\qt\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 setting.h -o debug\moc_setting.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC setting.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\moc_setting.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\2010.05\qt\bin\moc.exe;setting.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\2010.05\qt\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_NO_DEBUG -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"c:\Qt\2010.05\qt\include\QtCore" -I"c:\Qt\2010.05\qt\include\QtGui" -I"c:\Qt\2010.05\qt\include\QtXml" -I"c:\Qt\2010.05\qt\include" -I"." -I"c:\Qt\2010.05\qt\include\ActiveQt" -I"release" -I"." -Ic:\Qt\2010.05\qt\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 setting.h -o release\moc_setting.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MOC setting.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\moc_setting.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="debug\moc_aboutus.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_aboutus.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_extendedfilesystem.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_extendedfilesystem.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_linllabel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_linllabel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_pathselect.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_pathselect.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_reportofscan_dialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_reportofscan_dialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_scan.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_scan.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_setting.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_setting.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\qrc_sorce.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\qrc_sorce.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClInclude Include="ui_aboutus.h" />
+    <ClInclude Include="ui_pathselect.h" />
+    <ClInclude Include="ui_reportofscan_dialog.h" />
+    <ClInclude Include="ui_scan.h" />
+    <ClInclude Include="ui_setting.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="aboutus.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\2010.05\qt\bin\uic.exe;aboutus.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\2010.05\qt\bin\uic.exe aboutus.ui -o ui_aboutus.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UIC aboutus.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ui_aboutus.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\2010.05\qt\bin\uic.exe;aboutus.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\2010.05\qt\bin\uic.exe aboutus.ui -o ui_aboutus.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UIC aboutus.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ui_aboutus.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="pathselect.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\2010.05\qt\bin\uic.exe;pathselect.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\2010.05\qt\bin\uic.exe pathselect.ui -o ui_pathselect.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UIC pathselect.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ui_pathselect.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\2010.05\qt\bin\uic.exe;pathselect.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\2010.05\qt\bin\uic.exe pathselect.ui -o ui_pathselect.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UIC pathselect.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ui_pathselect.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="reportofscan_dialog.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\2010.05\qt\bin\uic.exe;reportofscan_dialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\2010.05\qt\bin\uic.exe reportofscan_dialog.ui -o ui_reportofscan_dialog.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UIC reportofscan_dialog.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ui_reportofscan_dialog.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\2010.05\qt\bin\uic.exe;reportofscan_dialog.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\2010.05\qt\bin\uic.exe reportofscan_dialog.ui -o ui_reportofscan_dialog.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UIC reportofscan_dialog.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ui_reportofscan_dialog.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="scan.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\2010.05\qt\bin\uic.exe;scan.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\2010.05\qt\bin\uic.exe scan.ui -o ui_scan.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UIC scan.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ui_scan.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\2010.05\qt\bin\uic.exe;scan.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\2010.05\qt\bin\uic.exe scan.ui -o ui_scan.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UIC scan.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ui_scan.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="setting.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\2010.05\qt\bin\uic.exe;setting.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\2010.05\qt\bin\uic.exe setting.ui -o ui_setting.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">UIC setting.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ui_setting.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\2010.05\qt\bin\uic.exe;setting.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\2010.05\qt\bin\uic.exe setting.ui -o ui_setting.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">UIC setting.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ui_setting.h;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Orginal1.png" />
+    <None Include="Orginal2.png" />
+    <None Include="Orginal3.png" />
+    <None Include="Orginal4.png" />
+    <None Include="Orginal5.png" />
+    <None Include="Orginal6.png" />
+    <None Include="Orginal7.png" />
+    <None Include="Orginal8.png" />
+    <None Include="Orginal9.png" />
+    <None Include="image\Quarantine.png" />
+    <None Include="image\Quarantine_Label.png" />
+    <None Include="image\Quarantine_clicked.png" />
+    <None Include="image\accept.png" />
+    <None Include="image\add.png" />
+    <None Include="image\backForm.png" />
+    <None Include="down-icon.png" />
+    <None Include="gear_wheel.png" />
+    <None Include="header.png" />
+    <None Include="help.png" />
+    <None Include="help_icon.jpg" />
+    <None Include="image\log.png" />
+    <None Include="image\logLabel.png" />
+    <None Include="image\log_clicked.png" />
+    <None Include="next.png" />
+    <None Include="image\remove.png" />
+    <None Include="image\scan.png" />
+    <None Include="image\scanLabel.png" />
+    <None Include="image\scan_clicked.png" />
+    <None Include="search.png" />
+    <None Include="image\setting.png" />
+    <None Include="settingLabel.png" />
+    <None Include="image\setting_clicked.png" />
+    <CustomBuild Include="sorce.qrc">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\2010.05\qt\bin\rcc.exe;Orginal1.png;Orginal2.png;Orginal3.png;Orginal4.png;Orginal5.png;Orginal6.png;Orginal7.png;Orginal8.png;Orginal9.png;down-icon.png;gear_wheel.png;header.png;help.png;help_icon.jpg;image\Quarantine.png;image\Quarantine_Label.png;image\Quarantine_clicked.png;image\accept.png;image\add.png;image\backForm.png;image\log.png;image\logLabel.png;image\log_clicked.png;image\remove.png;image\scan.png;image\scanLabel.png;image\scan_clicked.png;image\setting.png;image\setting_clicked.png;next.png;search.png;settingLabel.png;sorce.qrc;treemodelConfig.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Qt\2010.05\qt\bin\rcc.exe -name sorce sorce.qrc -o debug\qrc_sorce.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">RCC sorce.qrc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\qrc_sorce.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\2010.05\qt\bin\rcc.exe;Orginal1.png;Orginal2.png;Orginal3.png;Orginal4.png;Orginal5.png;Orginal6.png;Orginal7.png;Orginal8.png;Orginal9.png;down-icon.png;gear_wheel.png;header.png;help.png;help_icon.jpg;image\Quarantine.png;image\Quarantine_Label.png;image\Quarantine_clicked.png;image\accept.png;image\add.png;image\backForm.png;image\log.png;image\logLabel.png;image\log_clicked.png;image\remove.png;image\scan.png;image\scanLabel.png;image\scan_clicked.png;image\setting.png;image\setting_clicked.png;next.png;search.png;settingLabel.png;sorce.qrc;treemodelConfig.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Qt\2010.05\qt\bin\rcc.exe -name sorce sorce.qrc -o release\qrc_sorce.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">RCC sorce.qrc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\qrc_sorce.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="treemodelConfig.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
