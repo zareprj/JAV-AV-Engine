@@ -1,0 +1,14 @@
+interface AVEngine_AsyncRPC
+{
+[async]  AsyncStartScan();
+[async]  AsyncStopScan();
+[async]  AsyncSaveAndExit();
+[async]  AsyncGetStatusMessage();
+[async]  AsyncGetNextMessageScan();
+[async]  AsyncStartQuarantine();
+[async]  AsyncGetQuarantineCount();
+[async]  AsyncMoveFileToQuarantine();
+[async]  AsyncGetQuarantinedFileInfo();
+[async]  AsyncRemoveFileFromQuarantine();
+[async]  AsyncRestore();
+}

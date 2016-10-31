@@ -1,0 +1,37 @@
+TARGETNAME=IOMONITOR
+
+TARGETPATH=OBJ
+
+TARGETTYPE=DRIVER
+
+TARGETLIBS= $(TARGETLIBS)
+	    	
+SOURCES=iomonitor.c \
+	IFunc.c \
+	FilterDispatch.c \
+	Log.c \
+	OwnDispatch.c \
+	FastIo.c \
+	FileApiBYIRP.c \
+	AvlTree.c \
+	BinaryTranslate.c \
+	CPU.c \
+	DatFileEnumator.c \
+	DatFileLoader.c \
+	DebugHeader.c \
+    FileInformation.c \
+	Header.c \
+    Hook.c \
+	iomonitor.c \
+	JDecryptedFile.c \
+	LoadDatFile.c \
+ 	Mem.c \
+	MemoryTree.c \
+	OperationsFunctions.c \
+	PatMatchUtility.c \
+	SbScaner.c \
+	ScanImp.c \
+	SMBuffer.c \
+	SMFile.c \
+	StateMachine.c \
+	VirtualMachine.c

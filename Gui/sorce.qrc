@@ -1,0 +1,41 @@
+<RCC>
+    <qresource prefix="/">
+        <file>treemodelConfig.txt</file>
+        <file>image/scan.png</file>
+        <file>image/log.png</file>
+        <file>image/scan_clicked.png</file>
+        <file>image/log_clicked.png</file>
+        <file>image/setting.png</file>
+        <file>image/setting_clicked.png</file>
+        <file>image/add.png</file>
+        <file>image/accept.png</file>
+        <file>image/remove.png</file>
+        <file>image/backForm.png</file>
+        <file>image/scanLabel.png</file>
+        <file>image/Quarantine.png</file>
+        <file>image/Quarantine_clicked.png</file>
+        <file>settingLabel.png</file>
+        <file>image/Quarantine_Label.png</file>
+        <file>image/logLabel.png</file>
+    </qresource>
+    <qresource prefix="/animate">
+        <file>Orginal9.png</file>
+        <file>Orginal1.png</file>
+        <file>Orginal2.png</file>
+        <file>Orginal3.png</file>
+        <file>Orginal4.png</file>
+        <file>Orginal5.png</file>
+        <file>Orginal6.png</file>
+        <file>Orginal7.png</file>
+        <file>Orginal8.png</file>
+    </qresource>
+    <qresource prefix="/icons">
+        <file>gear_wheel.png</file>
+        <file>header.png</file>
+        <file>down-icon.png</file>
+        <file>search.png</file>
+        <file>next.png</file>
+        <file>help.png</file>
+        <file>help_icon.jpg</file>
+    </qresource>
+</RCC>

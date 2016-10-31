@@ -1,0 +1,159 @@
+[ uuid (7f6c4340-eb67-11d1-b9d7-00c04fad9a3b),
+  version(1.0),
+  pointer_default(unique)
+]
+
+// typedef __int8  UINT8 ;
+// typedef __int16 UINT16 ;
+// typedef __int32 UINT32 ;
+// typedef __int64 UINT64 ;
+// typedef __int64 INT64 ;
+
+
+
+interface AVEngine_AsyncRPC
+{
+
+typedef struct _SYSTEMTIME_
+{
+	unsigned short  wYear;
+	unsigned short  wMonth;
+	unsigned short  wDayOfWeek;
+	unsigned short  wDay;
+	unsigned short  wHour;
+	unsigned short  wMinute;
+	unsigned short  wSecond;
+	unsigned short  wMilliseconds;
+} 	SYSTEMTIME_;
+
+const long DEFAULT_ASYNC_DELAY        = 20;   // in seconds
+const char* DEFAULT_PROTOCOL_SEQUENCE = L"ncalrpc" ;
+const char* DEFAULT_ENDPOINT          = L"8765";
+
+typedef enum {SystemLogOff , SystemShutDown , NoSystemConfig } eSystemActivite ; 
+typedef enum {NoClean=0, Clean , Quarantine , AskUsr} eCleanOption;
+typedef enum {successfull,fail} eOperationResualtState;
+typedef enum {JustFile , JustMemory , MemoryAndFile } eScantype ;
+
+typedef struct _sCleanType_
+{
+	unsigned char PrecessClean ;
+	unsigned char DllClean  ;
+	unsigned char CompressClaen  ;
+}sCleanType ;
+
+typedef struct _sFileScanType_
+{ 
+	unsigned char  ZipFile   ; 
+	unsigned char  RarFile   ;
+	unsigned char  ExecuteableOnly  ; 
+}sFileScanType ;
+
+typedef struct _sMemScanType_
+{
+	unsigned char  MemDll  ;
+	unsigned char  MemProcess  ;
+	unsigned char  MemService  ;
+}sMemScanType ;
+
+
+typedef struct _ScanConfig_
+{
+	eCleanOption     oeCleanOption ;  
+	eSystemActivite  oeeSystemActivite ;
+	sFileScanType    osFileScanType;
+	sMemScanType     osMemScanType ;
+	eScantype        oeScantype;  
+	sCleanType       osCleanType;
+	[string] const wchar_t *  pwszFilterString;
+	[string] const wchar_t *  pathToScan;	   
+}ScanConfig;
+
+typedef struct _QuarantineFileStructure
+{
+	SYSTEMTIME_ osTime;
+	unsigned int u32FileIndex;
+	unsigned int u32NameSize;	
+	unsigned int u32PathSize;
+	unsigned int u32ReasonSize;
+	wchar_t szFileName[260];
+	wchar_t szFullPath[520];
+	wchar_t szReason[260];
+}QuarantineFileStructure;
+
+typedef struct _ScanEndJobReport_
+{
+	wchar_t headComment[1024];
+	wchar_t tailComment[1024];
+
+	unsigned int       numberOftotalScan;
+	unsigned short int numberOfFailedToScan;
+	unsigned int numberOfArchiveFile; // numberOfnonArchiveFile=numberOftotalScan-numberOfArchiveFile
+	
+	
+    unsigned short int numberOfTotalDetection;
+	unsigned short int numberOfInfected;
+
+	unsigned short int numberOfDeleted;
+	unsigned short int numberOfCleaned;
+	unsigned short int numberOfQuaratine;
+
+}ScanEndJobReport;
+
+typedef struct _StatusMessage_
+{
+	unsigned int b_havemessage ;
+	unsigned int precentToComplete;
+	wchar_t currentScanPath[1024];
+}StatusMessage;
+typedef struct _ScanMessage_
+{
+	wchar_t  Message[1024];
+}ScanMessage, BigString;
+
+void  AsyncStartScan(handle_t hBinding,               
+			         [in] ScanConfig _ScanConfig,
+					 [out] eOperationResualtState *_eOperationResualtState
+	   		        );
+void  SyncGetScanEndJobReport(handle_t hBinding,
+					          [out] ScanEndJobReport *_scanEndJobReport);//when AsyncStartScan completed, return end  scan report, elsewhere return null
+void  SyncPause(handle_t hBinding,
+					[out] eOperationResualtState *_eOperationResualtState);
+void  SyncContinue(handle_t hBinding,
+					[out] eOperationResualtState *_eOperationResualtState);
+
+void  AsyncStopScan(handle_t hBinding,
+					[out] eOperationResualtState *_eOperationResualtState);
+
+void  AsyncSaveAndExit(handle_t hBinding,
+					[out] eOperationResualtState *_eOperationResualtState);
+
+
+void AsyncGetStatusMessage(handle_t hBinding,               
+		      	     [out] StatusMessage *_StatusMessage 
+	   		         );
+void AsyncGetNextMessageScan(handle_t hBinding,
+					    [out] ScanMessage* _ScanMessage);
+
+// Kia
+//////////////////////////////////////////////////////////////////////////
+void AsyncStartQuarantine(handle_t hBinding, [out] eOperationResualtState *_eOperationResualtState);
+//////////////////////////////////////////////////////////////////////////
+void AsyncGetQuarantineCount(handle_t hBinding,
+						        [out] unsigned int * pu32Count);
+//////////////////////////////////////////////////////////////////////////
+void AsyncMoveFileToQuarantine(handle_t hBinding,
+							   [in] BigString* posFilePath,
+							   [in] BigString* posReason,
+								[out] eOperationResualtState *_eOperationResualtState);
+//////////////////////////////////////////////////////////////////////////
+void AsyncGetQuarantinedFileInfo(handle_t hBinding, [in] unsigned int *pu32Index, [in] QuarantineFileStructure* posHQF , [out] eOperationResualtState *_eOperationResualtState);
+//////////////////////////////////////////////////////////////////////////
+void AsyncRemoveFileFromQuarantine(handle_t hBinding, [out] eOperationResualtState *_eOperationResualtState, [in] unsigned int *pu32Index);
+//////////////////////////////////////////////////////////////////////////
+void AsyncRestore(handle_t hBinding, [out] eOperationResualtState *_eOperationResualtState, [in]unsigned int *pu32Index, [in]BigString* pszPathToExtract);
+//////////////////////////////////////////////////////////////////////////
+// End Kia
+
+void Shutdown(handle_t hBinding);
+}
